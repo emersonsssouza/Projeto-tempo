@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Clima</title>
+</head>
+
+<body id="body">
+    <main>
+        <div class="container">
+            <div class="content">
+                <input type="text" placeholder="Digite sua Cidade" id="cidade" />
+                <button onclick="cidadeAtual()">
+                    Buscar<i class="fas fa-search"></i>
+                </button>
+            </div>
+
+            <div class="content_information">
+                <div class="BColor" id="BColor">
+                    <div class="container_Color">
+                        <h2 id="localCidade">Tempo agora em...</h2>
+                        <p id="data_semana"><!--Dinamicamente do JS--></p>
+                        <div class="temp">
+                            <p>
+                                <i class="fas fa-thermometer-half"></i>
+                                <span id="temp"> 0º C </span>
+                            </p>
+                            <div class="info_temp">
+                                <p>
+                                    <i class="fas fa-sun" style="color: orange"></i>
+                                    <span id="clima"> Clima: </span>
+                                </p>
+                                <p>
+                                    <i class="fas fa-thermometer-three-quarters" style="color: rgba(20, 231, 13, 0.979)"></i>
+                                    <span id="sensation"> Sensação: </span>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <img src="" alt="" />
+                <div class="add_info">
+                    <div class="item">
+                        <p>
+                            <i class="fas fa-arrow-down" style="color: blue"></i><span id="tempMin"> Temp Min:</span>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p>
+                            <i class="fas fa-arrow-up" style="color: red"></i>
+                            <span id="tempMax"> Temp Max:</span>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p>
+                            <i class="fas fa-wind" style="color: rgba(2, 2, 182, 0.397)"></i><span id="vento"> Vel
+                                vento: </span>
+                        </p>
+                    </div>
+                    <div class="item">
+                        <p>
+                            <i class="fas fa-tint" style="color: rgba(5, 212, 5, 0.822)"></i>
+                            <span id="desc"> Humidade:</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="app.js"></script>
+</body>
+
+</html>
