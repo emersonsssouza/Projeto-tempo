@@ -51,34 +51,36 @@ main {
     outline: none;
     box-shadow: 2px 2px 2px #000;
     width: 300px;
-    height: 30px;
+    height: 40px;
     margin: 0 0.2rem;
     text-align: left;
     padding: 0 0.4rem;
-    font-size: 15px;
-    background-color: #ddcfcf7c;
+    font-size: 20px;
+    background-color: #000000b9;
+    color: #fff;
 }
 
 .container .content input[type="text"]::placeholder {
     text-align: center;
-    font-size: 15px;
-    color: #000;
+    font-size: 20px;
+    color: #fff;
 }
 
 .container .content button {
-    background-color: #004983;
+    background-color: #012038;
+    color: #fff;
     box-shadow: 2px 2px 2px #000;
-    border: 1px solid #fff;
+    border: none;
     width: 100px;
-    height: 30px;
-    font-size: 15px;
+    height: 40px;
+    font-size: 17px;
     padding: 0.2rem;
     border-radius: 5px;
     cursor: pointer;
 }
 
 .container .content button:hover {
-    color: #fff;
+    color: #0080CD;
 }
 
 .container .content button i {
@@ -93,20 +95,19 @@ main {
 }
 
 .container .content_information h2 {
-    font-size: 20px;
+    font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
     letter-spacing: 1px;
     margin: 0.5rem 0;
 }
 
 .container .content_information #data_semana {
-    font-size: 16px;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
     margin: 0.3rem 0;
 }
 
 .content_information .BColor {
-    /*Estilos inseridos dinamicamente*/
     background-position: top;
     background-size: cover;
     background-repeat: no-repeat;
@@ -130,14 +131,14 @@ main {
     display: grid;
     place-items: center;
     width: auto;
-    height: 150px;
+    height: 300px;
     background-color: transparent;
     border-radius: 10px;
     padding: 5px;
 }
 
 .container .content_information .temp p {
-    font-size: 25px;
+    font-size: 30px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -150,14 +151,16 @@ main {
 
 .container .content_information .temp .info_temp p {
     font-family: Arial, Helvetica, sans-serif;
-    font-size: 15px;
+    font-size: 20px;
 }
 
 .container .content_information .add_info {
+    height: 50px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     place-items: center;
-    border-radius: 10p;
+    border-radius: 10px;
+    background-color: #012038;
 }
 
 .container .content_information .add_info .item {
@@ -168,26 +171,78 @@ main {
 
 .container .content_information .add_info .item p {
     padding: 0.5rem;
+    font-size: 20px;
     font-family: Arial, Helvetica, sans-serif;
 }
 
-@media (max-width: 450px) {
+@media (max-width: 575px) {
+
+    body,
+    html {
+        background-color: #08243b;
+    }
+
     main {
-        width: 90vw;
-        padding: 0.1rem;
+        width: 100%;
+        height: 100%;
+        padding: 5px;
+    }
+
+    main .container {
+        height: 100%;
+    }
+
+    .container .content {
+        height: 100px;
+    }
+
+    .container .content input[type="text"] {
+        font-size: 15px;
+    }
+
+    .container .content input[type="text"]::placeholder {
+        font-size: 15px;
+    }
+
+    .container .content button {
+        font-size: 17px;
+    }
+
+    .container .content_information h2 {
+        font-size: 20px;
+    }
+
+    .container .content_information .temp p {
+        font-size: 25px;
     }
 
     .container .content_information .temp .info_temp {
         width: 100%;
     }
 
-    .container .content button {
-        border: none;
-        font-size: 15px;
-        color: #fff;
+    .container .content_information .temp .info_temp p {
+        font-size: 19px;
+    }
+
+    .container .content_information .add_info {
+        height: 100%;
     }
 }
 
-@media (max-width: 768px) {}
+@media (min-width: 792px) {
+    main {
+        width: 90%;
+        height: 70%;
+    }
 
-@media (max-width: 991px) {}
+    .container .content_information .add_info {
+        height: 100%;
+    }
+}
+
+@media (min-width: 1200px) {
+    main {
+        width: 100%;
+        height: 100%;
+    }
+}
