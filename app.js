@@ -21,7 +21,7 @@ async function buscarCidade(cidade) {
     ).then((Response) => Response.json());
     console.log(dados);
     if (dados == '' || dados === '') {
-        alert('Há uma instabilidade momentanea por favor aguarde!')
+        alert('Há uma instabilidade em nossos sistemas por favor aguarde!')
     } else {
         infoTela(dados);
     }
